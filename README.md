@@ -25,7 +25,17 @@ A PHP REST API for role and user management with JWT authentication, built with 
 - Place the project folder inside `xampp/htdocs` to serve it via Apache.  
 - Configure `.env` accordingly to connect to MySQL (usually user: `root`, password: empty by default).
 
+### Installing Composer on Windows
 
+1. Download the Composer-Setup.exe installer from [https://getcomposer.org/download/](https://getcomposer.org/download/).  
+2. Run the installer and follow the setup wizard:  
+   - It will detect your PHP installation automatically (ensure PHP is installed or use XAMPP’s PHP).  
+   - Select to add Composer to your system PATH for easy command-line use.  
+3. After installation, open a new Command Prompt or PowerShell window and verify installation by running:
+
+   ```bash
+   composer --version
+### Project Setup
 1. Clone the repository:
    ```bash
    git clone https://github.com/vijay-mca/role_api.git
@@ -35,7 +45,8 @@ A PHP REST API for role and user management with JWT authentication, built with 
    ```bash
    composer install
    composer dump-autoload
-3. Setup the database:
+### Setup the database:
+3. Create the database role_app in your MariaDB or MySQL server.
    ```bash
    mysql -u development -p role_app < role_app.sql
 You can use the following default admin user to log in and test the API:
