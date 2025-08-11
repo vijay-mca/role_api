@@ -67,7 +67,7 @@ class AuthService
 
             if (!empty($modulesString)) {
                 $items = explode(',', $modulesString);
-                $routePrefix = ((int)$user['data']['user']->role_id === 1) ? '/admin' : '';
+                $routePrefix = ((int)$user['data']['user']->role_id === 1) ? '/admin' : '/app';
                 foreach ($items as $item) {
                     list($id, $name, $routeSlug) = explode(':', $item);
                     $modulesArray[] = [
