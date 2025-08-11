@@ -92,7 +92,7 @@ class UserController
      * @param array $data Verification data related to user
      * @return void Sends JSON response confirming verification success
      */
-    public function verifyUser(array $data): void
+    public function verifyUser($data): void
     {
         ResponseHelper::jsonResponse([
             'statusCode' => 200,
